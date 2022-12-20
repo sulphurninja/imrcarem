@@ -2,7 +2,7 @@ import { Category } from "../typings";
 
 export const fetchCategories = async () => {
   const res = await fetch(
-    `http://localhost:3000/api/getCategories`
+    `https://imrcarem.vercel.app/api/getCategories`
   );
 
   const data = await res.json();

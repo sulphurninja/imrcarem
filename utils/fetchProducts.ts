@@ -2,7 +2,7 @@ import { Product } from "../typings";
 
 export const fetchProducts = async () => {
   const res = await fetch(
-    `http://localhost:3000/api/getProducts`
+    `https://imrcarem.vercel.app/api/getProducts`
   );
 
   const data = await res.json();
