@@ -2,8 +2,6 @@ import { GetStaticProps } from "next";
 import { sanityClient, urlFor } from '../../sanity';
 import Image from "next/image";
 import { useForm, SubmitHandler } from 'react-hook-form'
-import { useDispatch } from "react-redux";
-import { addToBasket } from "../../redux/basketSlice";
 import { useState } from "react";
 import { Product } from "../../typings";
 import Link from "next/link";
@@ -22,10 +20,6 @@ interface IFormInput {
 }
 
 function Product({ product }: Props) {
-  const dispatch = useDispatch()
-  const addItemToBasket = () => {
-    dispatch(addToBasket(product));
-  };
   const [submitted, setSubmitted] = useState(false)
   const {
     register,
