@@ -46,7 +46,6 @@ export default function Home({categories, products }: Props) {
       <Aboutus/>
       <Skills/>
       <Tab.Group>
-      <Bookings />
         <section className=' min-w-fit  gap-y-4 bg-black justify-center  '>
                             <Tab.List className="flex-wrap  bg-black flex gap-y-4  justify-center ">
 
