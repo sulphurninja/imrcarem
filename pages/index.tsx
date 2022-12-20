@@ -7,13 +7,11 @@ import Aboutus from '../components/aboutus'
 import Skills from '../components/skills'
 import { fetchCategories } from '../utils/fetchCategories'
 import { fetchProducts } from '../utils/fetchProducts'
-import { fetchServices } from '../utils/fetchServices'
 import { GetServerSideProps } from 'next'
 import { urlFor } from '../sanity';
 import Productz from '../components/Productz';
 import { useState } from 'react';
 import Link from 'next/link';
-import Bookings from '../components/Bookings';
 import { Category, Product } from '../typings';
 
 const inter = Inter({ subsets: ['latin'] })
@@ -91,7 +89,6 @@ export const getServerSideProps: GetServerSideProps<Props> = async (
 ) => {
   const categories = await fetchCategories();
   const products = await fetchProducts();
-  const services = await fetchServices()
 
   return {
     props: {
