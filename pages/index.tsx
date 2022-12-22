@@ -26,11 +26,7 @@ export default function Home({categories, products }: Props) {
   
   console.log(products);
 
-  const showProducts = (category: number) => {
-    return products
-      .filter((product) => product.category._ref === categories[category]._id)
-      .map((product) => <Productz product={product} key={product._id} />); // filter products by category
-  };
+  
 
   return (
     <div>
@@ -65,7 +61,7 @@ export default function Home({categories, products }: Props) {
                         
                     ))}
                 </Tab.List>
-                <Tab.Panels className='mx-auto bg-black   max-w-fit  pt-10 pb-24 sm:px-4'>
+                {/* <Tab.Panels className='mx-auto bg-black   max-w-fit  pt-10 pb-24 sm:px-4'>
                   <Tab.Panel className='grid grid-flow-row grid-cols-1 gap-4 gap-y-[80px]  lg:grid lg:grid-flow-row lg:grid-cols-3 lg:gap-4' >{showProducts(0)}</Tab.Panel>
                   <Tab.Panel>{showProducts(1)}</Tab.Panel>
                   <Tab.Panel>{showProducts(2)}</Tab.Panel>
@@ -75,7 +71,7 @@ export default function Home({categories, products }: Props) {
                   <Tab.Panel>{showProducts(6)}</Tab.Panel>
                   <Tab.Panel>{showProducts(7)}</Tab.Panel>
 
-                </Tab.Panels>
+                </Tab.Panels> */}
                 </section>
                 </Tab.Group>
                 
